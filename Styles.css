@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    color: #4b0082; 
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer {
+    background: #FFA07A;
+    color: #fff; 
+    text-align: center;
+    padding: -5px 0; 
+    line-height: 0.2;
+    margin-top: auto;
+    text-align: center;
+}
+
+nav {
+    background: #330;
+    color: #800080; 
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-right a {
+    color: #fff; 
+    text-decoration: none;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.nav-right a:hover {
+    background: #555;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+.main {
+    flex: 2;
+    padding: 15px;
+}
+
+.sidebar {
+    flex: 1;
+    background: #f4f4f4;
+    padding: 15px;
+}
+
+footer {
+    margin-top: 1px;
+	background:#800080;
+}
+
+h1, h2 {
+    color: #000000;
+}
+
+h1 {
+    font-size: 1.9em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: black;
+    text-align: right;
+}
+
+p {
+    margin: 15px 0;
+    text-align: center;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+	margin-left:190px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #333;
+}
+
+form {
+    margin: 15px auto;
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 30%;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+form button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+form button:hover {
+    background: #555;
+}
+
+.sidebar table img {
+    width: 100px; 
+    height: auto;
+}
+
+.large-image {
+    width: 180%; 
+    height: auto; 
+    max-width: 1500px; 
+    margin-left: -50%; 
+}

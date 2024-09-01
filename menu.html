@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - SAWA SAVORIES</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .price {
+            color: red;
+            font-size: 1.2em;
+            font-weight: bold;
+       
+        .card {
+            margin-bottom: 20remrem; /* Add bottom margin for spacing */
+			 margin-left: 0.5rem; 
+        }
+        .custom-margin {
+            margin-left: 20rem; /* Adjust the margin-left as needed */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">SAWA SAVORIES</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="text-center mt-5">
+        <h1>Menu</h1>
+        <p>Explore our delicious African dishes.</p>
+    </header>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Featured Dishes</h2>
+                <!-- Static featured dishes -->
+                <div class="card mb-3">
+                    <img src="afrique.jpg" class="card-img-top" alt="Dish 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Roasted Chicken with Fried Plantains</h5>
+                        <p class="price">$20.99</p>
+                        <p class="card-text">
+                            <ul style="font-size: 0.9rem;">
+                                <li>Roasted Chicken: Golden-brown, well-seasoned, and crispy.</li>
+                                <li>Fried Plantains: Sweet, caramelized, and delightful.</li>
+                                <li>Puff-Puff: Light, fluffy fried dough balls.</li>
+                                <li>Meat Pies: Savory pastries with a crimped edge.</li>
+                                <li>Couscous: Fluffy and perfect for soaking up flavors.</li>
+                                <li>Pico de Gallo Salsa: Fresh, zesty with tomatoes, onions, cilantro.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <img src="braise.jpg" class="card-img-top" alt="Dish 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Grilled Meat and Vegetable Skewers</h5>
+                        <p class="price">$20.99</p>
+                        <p class="card-text">
+                            <ul style="font-size: 0.9rem;">
+                                <li>Grilled Meat and Vegetable Skewers: Juicy meat with tomatoes, onions, and peppers.</li>
+                                <li>White Rice: Fluffy, garnished with a lime wedge.</li>
+                                <li>Sautéed Onions with Green Olives: Flavorful and savory.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <img src="maroc.jpg" class="card-img-top" alt="Dish 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Couscous With Salad</h5>
+                        <p class="price">$17.99</p>
+                        <p class="card-text">
+                            <ul style="font-size: 0.9rem;">
+                                <li>Couscous: Fluffy, garnished with cinnamon sticks and herbs.</li>
+                                <li>Salad: Fresh, with diced vegetables and herbs.</li>
+                                <li>Pomegranate Seeds: Sweet and colorful.</li>
+                                <li>Dried Fruits and Nuts: A mix of apricots, figs, and nuts.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>Other Dishes</h2>
+                <!-- Dynamic dishes -->
+                <div class="row custom-margin" id="more-dishes">
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>Sawa Savories</p>
+    </footer>
+
+    <!-- Bootstrap JS (Optional, only required if you need Bootstrap JavaScript features) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        function fetchMoreDishes() {
+            fetch('get_more_dishes.php')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(dishes => {
+                    const container = document.getElementById('more-dishes');
+                    container.innerHTML = ''; // Clear previous content
+                    dishes.forEach(dish => {
+                        const card = document.createElement('div');
+                        card.className = 'card mb-3';
+                        card.innerHTML = `
+                            <img src="${dish.image_url}" class="card-img-top" alt="${dish.name}">
+                            <div class="card-body">
+                                <h5 class="card-title">${dish.name}</h5>
+                                <p class="card-text">${dish.description}</p>
+                                <p class="card-text text-danger">$${dish.price}</p>
+                            </div>
+                        `;
+                        container.appendChild(card);
+                    });
+                })
+                .catch(error => console.error('Error fetching dishes:', error));
+        }
+
+        // Call the function when the page loads
+        document.addEventListener('DOMContentLoaded', fetchMoreDishes);
+    </script>
+</body>
+</html>

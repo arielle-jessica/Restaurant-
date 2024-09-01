@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAWA SAVORIES</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        .content {
+            flex: 1;
+        }
+        .large-image {
+            max-height: 600px; /* Adjust as needed */
+            object-fit: cover; /* Ensure the image fits the container */
+        }
+        .note-container {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f0f8ff; /* Light background color for the bubble */
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 1.1rem;
+            color: #333;
+            text-align: center;
+            max-width: 600px; /* Adjust as needed */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .note-container p {
+            margin: 0;
+            font-family: 'Arial', sans-serif; /* Use a clean, modern font */
+        }
+        .best-sellers img {
+            max-height: 300px; /* Adjust the size of the thumbnails */
+            object-fit: cover; /* Ensure thumbnails fit the container */
+			
+        }
+        footer {
+            background-color: #343a40; /* Dark background for footer */
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">SAWA SAVORIES</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="menu.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+				 <li class="nav-item">
+                    <a class="nav-link" href="reservation.html">Reservation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="text-center mt-5">
+        <h1>Where Tradition Meets Innovation, Bringing You the Best of African Delights</h1>
+    </header>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="fish.JPG" class="img-fluid large-image" alt="Description of the image">
+                <div class="note-container">
+                    <p>Discover the rich flavors and diverse ingredients of African cuisine. Our dishes are inspired by traditional recipes from across the continent, combining fresh ingredients and unique spices to create unforgettable culinary experiences.</p>
+                </div>
+            </div>
+            <div class="col-md-6 best-sellers">
+                <h2>Our Best Sellers</h2>
+                <table class="table">
+                    <tr>
+                        <td><img src="afrique.jpg" class="img-thumbnail" alt="Dish 1"></td>
+                        <td> Roasted Chicken with Fried Plantains</td>
+                    </tr>
+                    <tr>
+                        <td><img src="braise.jpg" class="img-thumbnail" alt="Dish 2"></td>
+                        <td>Grilled Meat and Vegetable Skewers</td>
+                    </tr>
+                    <tr>
+                        <td><img src="maroc.jpg" class="img-thumbnail" alt="Dish 3"></td>
+                        <td>Couscous With Salad</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Sawa Savories</p>
+    </footer>
+
+    <!-- Bootstrap JS (Optional, only required if you need Bootstrap JavaScript features) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

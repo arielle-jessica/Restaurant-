@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SAWA SAVORIES</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        .content {
+            flex: 1;
+        }
+        footer {
+            margin-top: auto;
+        }
+        .bubble {
+            position: relative;
+            margin-top: 100px;
+            padding: 15px;
+            background-color: #9b9bff;
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            font-size: 0.9em;
+            text-align: center;
+        }
+        .bubble::before {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -10px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent transparent #007bff transparent;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">SAWA SAVORIES</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="content">
+        <header class="text-center mt-5">
+            <h1>About Us</h1>
+            <p>We are passionate about bringing you the best of African delights.</p>
+        </header>
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Our Mission</h2>
+                    <p>To showcase the rich diversity and flavors of African cuisine.</p>
+                </div>
+                <div class="col-md-6">
+                    <h2>Our Vision</h2>
+                    <p>To be recognized globally for excellence in African culinary arts.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Developer Info Bubble -->
+        <div class="container">
+            <div class="bubble">
+                <strong>Developer Info:</strong>
+                <p>Developed by Arielle Jessica</p>
+                <p>Email: arielle@hahaha.com</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>Sawa Savories</p>
+    </footer>
+
+    <!-- Bootstrap JS (Optional, only required if you need Bootstrap JavaScript features) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
